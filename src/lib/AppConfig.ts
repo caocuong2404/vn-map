@@ -3,7 +3,7 @@ import { LatLngExpression } from 'leaflet'
 // FIXME: naming and structure
 export const AppConfig = {
   minZoom: 9,
-  maxZoom: 18, // max zoom level of CARTO: 18
+  maxZoom: 22, // max zoom level with tile stretching enabled
   ui: {
     topBarHeight: 80,
     bigIconSize: 48,
@@ -12,7 +12,8 @@ export const AppConfig = {
     menuIconSize: 16,
     topBarIconSize: 24,
   },
-  baseCenter: [52.02022592597971, 8.530780645829076] as LatLngExpression, // bielefeld lol
+  // Da Nang
+  baseCenter: [16.0221, 108.2556] as LatLngExpression, // bielefeld lol
 }
 
 export enum NavMenuVariant {

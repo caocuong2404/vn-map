@@ -1,10 +1,9 @@
+import { AppConfig } from '@/lib/AppConfig'
+import MarkerCategories from '@/lib/MarkerCategories'
+import { PlaceValues } from '@/lib/Places'
 import dynamic from 'next/dynamic'
 import { useCallback, useMemo } from 'react'
 import { Marker as ReactMarker } from 'react-leaflet'
-
-import { AppConfig } from '#lib/AppConfig'
-import MarkerCategories from '#lib/MarkerCategories'
-import { PlaceValues } from '#lib/Places'
 
 import LeafletDivIcon from '../LeafletDivIcon'
 import useMapContext from '../useMapContext'

@@ -1,7 +1,6 @@
+import { AppConfig } from '@/lib/AppConfig'
 import { LucideProps } from 'lucide-react'
 import { FunctionComponent, useMemo } from 'react'
-
-import { AppConfig } from '#lib/AppConfig'
 
 export interface MarkerIconWrapperProps {
   icon?: FunctionComponent<LucideProps>

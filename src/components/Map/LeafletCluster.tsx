@@ -8,10 +8,9 @@ import Leaflet, { LeafletMouseEventHandlerFn } from 'leaflet'
 
 import 'leaflet.markercluster'
 
+import { AppConfig } from '@/lib/AppConfig'
 import { LucideProps } from 'lucide-react'
 import React, { FunctionComponent } from 'react'
-
-import { AppConfig } from '#lib/AppConfig'
 
 import LeafletDivIcon from './LeafletDivIcon'
 import MarkerIconWrapper from './LeafletMarker/MarkerIconWrapper'

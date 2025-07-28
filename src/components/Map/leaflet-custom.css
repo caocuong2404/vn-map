@@ -37,3 +37,9 @@
   font-size: initial;
   min-height: initial;
 }
+
+/* overide popup */
+.leaflet-container a.leaflet-popup-close-button {
+  
+}
+

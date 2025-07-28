@@ -1,6 +1,5 @@
+import Map from '@/components/Map'
 import Head from 'next/head'
-
-import Map from '#components/Map'
 
 const MapPage = () => (
   <div>

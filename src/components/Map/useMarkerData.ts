@@ -1,9 +1,8 @@
+import useLeafletWindow from '@/components/Map/useLeafletWindow'
+import { AppConfig } from '@/lib/AppConfig'
+import { PlacesClusterType, PlacesType } from '@/lib/Places'
 import { LatLngExpression, Map } from 'leaflet'
 import { useEffect, useMemo, useState } from 'react'
-
-import useLeafletWindow from '#components/Map/useLeafletWindow'
-import { AppConfig } from '#lib/AppConfig'
-import { PlacesClusterType, PlacesType } from '#lib/Places'
 
 interface useMapDataValues {
   locations?: PlacesType

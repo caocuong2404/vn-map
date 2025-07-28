@@ -44,6 +44,13 @@
         "varsIgnorePattern": "^_",
         "caughtErrorsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "@typescript-eslint/no-redeclare": [
+      "error",
+      {
+        "ignoreDeclarationMerge": true
+      }
+    ],
+    "react/prop-types": 0
   }
 }

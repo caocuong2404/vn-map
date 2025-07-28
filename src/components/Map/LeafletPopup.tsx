@@ -1,13 +1,12 @@
+import { AppConfig } from '@/lib/AppConfig'
+import { MarkerCategoriesValues } from '@/lib/MarkerCategories'
+import { PlaceValues } from '@/lib/Places'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import dynamic from 'next/dynamic'
 import { Popup, PopupProps } from 'react-leaflet'
 
-import { AppConfig } from '#lib/AppConfig'
-import { MarkerCategoriesValues } from '#lib/MarkerCategories'
-import { PlaceValues } from '#lib/Places'
-
-const MarkerIconWrapper = dynamic(() => import('#components/Map/LeafletMarker/MarkerIconWrapper'))
-const Button = dynamic(() => import('#components/common/Button'))
+const MarkerIconWrapper = dynamic(() => import('@/components/Map/LeafletMarker/MarkerIconWrapper'))
+const Button = dynamic(() => import('@/components/common/Button'))
 
 interface LeafletPopupProps extends PopupProps {
   handlePopupClose: (active?: boolean) => void

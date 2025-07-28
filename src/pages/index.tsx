@@ -1,9 +1,8 @@
+import NavMenu from '@/components/common/NavMenu'
+import { AppConfig } from '@/lib/AppConfig'
 import { Leaf } from 'lucide-react'
 import Head from 'next/head'
 import Link from 'next/link'
-
-import NavMenu from '#components/common/NavMenu'
-import { AppConfig } from '#lib/AppConfig'
 
 const Home = () => (
   <div className="container mx-auto max-w-2xl p-3 max-md:max-w-none">

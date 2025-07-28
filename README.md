@@ -1,10 +1,10 @@
-typescript next.js starter kit for leaflet-react
+VN Map - Interactive Vietnam Province Map
 ===============
 
-An extensible [next.js](https://nextjs.org/) starter kit archived with the [leaflet-react](https://react-leaflet.js.org/) map plugin. Template visually enhanced by [tailwind](https://tailwindcss.com/) and [lucide icons](https://lucide.dev/). ✨
-Setup with [typescript](https://www.typescriptlang.org/) 👐.
+An interactive Vietnam map application built with [Next.js](https://nextjs.org/) and [Leaflet React](https://react-leaflet.js.org/). Features province search, detailed statistics, and beautiful visualizations. Template enhanced by [Tailwind CSS](https://tailwindcss.com/) and [Lucide icons](https://lucide.dev/). ✨
+Built with [TypeScript](https://www.typescriptlang.org/) 👐.
 
-Packed with useful components and hooks for using the map and create UI elements for next(.js) mapping projects.
+Packed with Vietnam-specific components including province search, GeoJSON visualization, and administrative data display for Vietnamese mapping projects.
 
 ### Table of Contents
 1. [Features](#features)
@@ -20,16 +20,18 @@ Packed with useful components and hooks for using the map and create UI elements
 
 ### <a id="features"></a> 🎇 Features
 
-- 🏇 mighty next.js 14 leaflet-react setup
-- 😏 typescript + strict lint setup
-- 🔗 next.js ready route nav module
-- 🌤 modular demo content
-- 🐛 custom marker icons
-- 📄 custom marker popups
-- 📚 marker categories
-- 🫧 marker cluster by category with matching icon+color and notification bubble with marker count
-- ⚓️ custom hooks for getting marker data and map context (thx [Flo301](https://github.com/Flo301))
-- 🏡 custom ui components (locate me, center on markers)
+- 🇻🇳 Interactive Vietnam province map with GeoJSON data
+- 🔍 Smart province and ward search with autocomplete
+- 📊 Detailed province statistics (population, area, GDP, budget)
+- 🎨 Color-coded provinces with hover effects
+- 📱 Responsive design with modern UI components
+- 🏇 Built on Next.js 14 with Leaflet React
+- 😏 TypeScript + strict lint setup
+- 🌤 Modular component architecture
+- 🐛 Custom marker support
+- 📄 Rich popup information
+- ⚓️ Custom hooks for map context and data management
+- 🏡 Custom UI components (locate, center, tile switcher)
 
 ### <a id="getting-started"></a> 🏎 Getting Started
 
@@ -39,14 +41,14 @@ In Version v0.1.2, I changed the path aliases to be more consistent with the ES 
 
 ```diff
 - import { SomeComponent } from '@components/useMap'
-+ import { SomeComponent } from '#components/useMap'
++ import { SomeComponent } from '@/components/useMap'
 ```
 
 #### <a id="clone-deploy"></a> ⛴ Clone & Deploy with Github and Vercel
 
 Create new Github repo with vercel and deploy it within minutes. Could not be easier as hitting some buttons. Shipping of private repos is possible.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frichard-unterberg%2Fnext-leaflet-starter-typescript)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2Fvn-map)
 
 Later: Check out your repo locally and run ```npm install``` or ```yarn``` in root
 
@@ -55,10 +57,10 @@ Follow Instructions for [Starting Up](#start-up)
 #### <a id="manual-install"></a> ⚙️ Manual install
 
 ```bash
-git clone https://github.com/richard-unterberg/next-leaflet-starter-typescript
+git clone https://github.com/your-username/vn-map
 # then
 npm install
-# or
+# or  
 yarn
 ```
 
@@ -90,16 +92,16 @@ npm run start
 yarn start
 ```
 
-### <a id="coming-up"></a> 📊 Upcoming (probably)
+### <a id="coming-up"></a> 📊 Upcoming Features
 
-+ redesign zoom in / zoom out
-+ atom components for map ui
-+ fix error when setting new coordinates in hot reload "Map container is already initialized."
-+ breakpoint hook synced with tailwind breakpoint which is usable in js
-+ multiple map instances per page
-  + not possible atm since we read the map instance directly from window object 🤫
-+ add axios for fetching data
-  + move simulated "endpoint" (Places) to public folder and convert to JSON
++ Enhanced province statistics dashboard
++ Export map data to various formats
++ Historical data visualization
++ Multi-language support (Vietnamese/English)
++ Administrative boundary updates
++ Mobile app version
++ Integration with Vietnamese government APIs
++ Province comparison tools
 
 - **Feel free to contribute!** 🤗
 

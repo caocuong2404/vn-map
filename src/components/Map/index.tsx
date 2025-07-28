@@ -1,30 +1,29 @@
+import LatLngLogo from '@/components/TopBar/LatLngLogo'
+import { AppConfig } from '@/lib/AppConfig'
+import { Places, PlacesType } from '@/lib/Places'
+import { defaultProvider } from '@/lib/TileProviders'
 import Leaflet from 'leaflet'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import { useResizeDetector } from 'react-resize-detector'
 
-import MapTopBar from '#components/TopBar'
-import { AppConfig } from '#lib/AppConfig'
-import MarkerCategories, { Category } from '#lib/MarkerCategories'
-import { Places, PlacesType } from '#lib/Places'
-
-import LeafleftMapContextProvider from './LeafletMapContextProvider'
 import useMapContext from './useMapContext'
 import useMarkerData from './useMarkerData'
 
-const LeafletCluster = dynamic(async () => (await import('./LeafletCluster')).LeafletCluster(), {
-  ssr: false,
-})
 const CenterToMarkerButton = dynamic(async () => (await import('./ui/CenterButton')).CenterButton, {
-  ssr: false,
-})
-const CustomMarker = dynamic(async () => (await import('./LeafletMarker')).CustomMarker, {
   ssr: false,
 })
 const LocateButton = dynamic(async () => (await import('./ui/LocateButton')).LocateButton, {
   ssr: false,
 })
 const LeafletMapContainer = dynamic(async () => (await import('./LeafletMapContainer')).LeafletMapContainer, {
+  ssr: false,
+})
+const TileSwitcher = dynamic(async () => (await import('./ui/TileSwitcher')).TileSwitcher, {
+  ssr: false,
+})
+
+const VnMapGeoJSON = dynamic(async () => (await import('./VietnamGeoJSON')).VnMapGeoJSON, {
   ssr: false,
 })
 
@@ -55,7 +54,11 @@ const LeafletMapInner = () => {
   const { map } = useMapContext()
 
   // we can use this to modify our query for locations
-  const [viewState, setViewState] = useState(getViewState(map))
+  const viewState = getViewState(map)
+  const [, setViewState] = useState(viewState)
+
+  // tile provider state management
+  const [currentTileProvider, setCurrentTileProvider] = useState(defaultProvider)
 
   const {
     width: viewportWidth,
@@ -105,10 +108,13 @@ const LeafletMapInner = () => {
   }, [allMarkersBoundCenter, map])
 
   return (
-    <div className="absolute h-full w-full overflow-hidden" ref={viewportRef}>
-      <MapTopBar />
+    <div className=" h-full w-full overflow-hidden" ref={viewportRef}>
+      {/* <MapTopBar /> */}
+      <div className="absolute top-0 right-0 bg-black-500">
+        <LatLngLogo />
+      </div>
       <div
-        className={`absolute left-0 w-full transition-opacity ${isLoading ? 'opacity-0' : 'opacity-1 '}`}
+        className={`left-0 w-full transition-opacity ${isLoading ? 'opacity-0' : 'opacity-1 '}`}
         style={{
           top: AppConfig.ui.topBarHeight,
           width: viewportWidth ?? '100%',
@@ -121,15 +127,21 @@ const LeafletMapInner = () => {
             zoom={allMarkersBoundCenter.minZoom}
             maxZoom={AppConfig.maxZoom}
             minZoom={AppConfig.minZoom}
+            tileProvider={currentTileProvider}
           >
             {!isLoading ? (
               <>
+                <VnMapGeoJSON />
                 <CenterToMarkerButton
                   center={allMarkersBoundCenter.centerPos}
                   zoom={allMarkersBoundCenter.minZoom}
                 />
                 <LocateButton />
-                {Object.values(clustersByCategory).map(item => (
+                <TileSwitcher
+                  currentProvider={currentTileProvider}
+                  onProviderChange={setCurrentTileProvider}
+                />
+                {/* {Object.values(clustersByCategory).map(item => (
                   <LeafletCluster
                     key={item.category}
                     icon={MarkerCategories[item.category as Category].icon}
@@ -140,7 +152,7 @@ const LeafletMapInner = () => {
                       <CustomMarker place={marker} key={marker.id} />
                     ))}
                   </LeafletCluster>
-                ))}
+                ))} */}
               </>
             ) : (
               // we have to spawn at least one element to keep it happy
@@ -155,10 +167,6 @@ const LeafletMapInner = () => {
 }
 
 // pass through to get context in <MapInner>
-const Map = () => (
-  <LeafleftMapContextProvider>
-    <LeafletMapInner />
-  </LeafleftMapContextProvider>
-)
+const Map = () => <LeafletMapInner />
 
 export default Map

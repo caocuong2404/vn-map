@@ -1,6 +1,11 @@
 import { Leaf, LocateFixed, LucideProps, PersonStanding } from 'lucide-react'
 import { FunctionComponent } from 'react'
-import colors from 'tailwindcss/colors'
+
+const colors = {
+  green: { 400: '#4ade80' },
+  blue: { 400: '#60a5fa' },
+  red: { 400: '#f87171' },
+}
 
 export enum Category {
   LOCATE = 0,
