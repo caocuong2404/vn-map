@@ -4,16 +4,11 @@ import Head from 'next/head'
 const MapPage = () => (
   <div>
     <Head>
-      <title>Map Example | Jumpstart your new leaflet mapping Project with next.js and typescript 🤩</title>
-      <meta
-        property="og:title"
-        content="Map Example | Jumpstart your new leaflet mapping Project with next.js and typescript 🤩"
-        key="title"
-      />
+      <title>VN Map</title>
+      <meta property="og:title" content="VN Map" key="title" />
       <meta
         name="description"
-        content="next-leaflet-starter-typescript is an extensible next.js starter template for the leaflet-maps-react plugin. Written in typescript,
-      visually enhanced by tailwind and lucide-react icons."
+        content="Search and display positions of provinces and wards after Vietnam's reform mergers."
       />
     </Head>
     <Map />

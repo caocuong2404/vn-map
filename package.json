@@ -3,13 +3,13 @@
   "homepage": "https://vn-map.vercel.app",
   "version": "0.1.3",
   "license": "MIT",
-  "author": "Richard Unterberg <https://github.com/richard-unterberg>",
+  "author": "Cuong C. Nguyen <https://github.com/caocuong2404>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/richard-unterberg/next-leaflet-starter-typescript/"
+    "url": "https://github.com/caocuong2404/vn-map"
   },
   "bugs": {
-    "url": "https://github.com/richard-unterberg/next-leaflet-starter-typescript/issues"
+    "url": "https://github.com/caocuong2404/vn-map/issues"
   },
   "scripts": {
     "dev": "next dev",
