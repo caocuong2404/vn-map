@@ -7,16 +7,11 @@ import Link from 'next/link'
 const Home = () => (
   <div className="container mx-auto max-w-2xl p-3 max-md:max-w-none">
     <Head>
-      <title>Jumpstart your new leaflet mapping Project with next.js and typescript 🤩</title>
-      <meta
-        property="og:title"
-        content="Jumpstart your new leaflet mapping Project with next.js and typescript 🤩"
-        key="title"
-      />
+      <title>VN Map - Provinces and Wards after Reform</title>
+      <meta property="og:title" content="VN Map - Provinces and Wards after Reform" key="title" />
       <meta
         name="description"
-        content="next-leaflet-starter-typescript is an extensible next.js starter template for the leaflet-maps-react plugin. Written in typescript,
-      visually enhanced by tailwind and lucide-react icons."
+        content="Search and display positions of provinces and wards after Vietnam's reform mergers."
       />
     </Head>
     <header className="items-top mt-10 gap-4 md:flex">
@@ -24,40 +19,37 @@ const Home = () => (
         <Leaf size={AppConfig.ui.bigIconSize} className="mt-2" />
       </span>
       <div>
-        <h2 className="text-4xl font-bold ">Next.js starter for leaflet-react</h2>
-        <h3 className="mb-16 text-3xl">written in Typescript</h3>
+        <h2 className="text-4xl font-bold ">VN Map - Explore Reformed Vietnam</h2>
+        <h3 className="mb-16 text-3xl">search provinces and wards with ease</h3>
       </div>
     </header>
     <section>
       <p className="mb-2">
-        <span>An extensible </span>
+        <span>An interactive map built with </span>
         <Link className="text-primary" target="_blank" href="https://nextjs.org/">
-          next.js
+          Next.js
         </Link>
-        <span> starter for the </span>
+        <span> and </span>
         <Link className="text-primary" target="_blank" href="https://react-leaflet.js.org/">
-          leaflet-react
+          React Leaflet
         </Link>
-        <span> plugin. Written in </span>
+        <span>. Written in </span>
         <Link className="text-primary" target="_blank" href="https://www.typescriptlang.org/">
-          typescript
+          TypeScript
         </Link>
-        <span>, visually enhanced by </span>
+        <span> and styled with </span>
         <Link className="text-primary" target="_blank" href="https://tailwindcss.com/">
-          tailwind
+          Tailwind
         </Link>
         <span> and </span>
         <Link className="text-primary" target="_blank" href="https://lucide.dev/">
-          lucide icons
+          Lucide icons
         </Link>
         <span>. ✨</span>
       </p>
       <p className="my-3">
         <span> 🤝 Feel free to contribute on </span>
-        <Link
-          href="https://github.com/richard-unterberg/typescript-next-leaflet-starter"
-          className="text-primary"
-        >
+        <Link href="https://github.com/caocuong2404/vn-map" className="text-primary">
           Github
         </Link>
       </p>
@@ -71,11 +63,8 @@ const Home = () => (
     <footer className="mt-16 flex justify-between rounded bg-light p-3 text-sm">
       <div>
         2023, some rights reserved <br />
-        <Link
-          href="https://github.com/richard-unterberg/typescript-next-leaflet-starter"
-          className="text-primary"
-        >
-          typescript-next-leaflet-starter
+        <Link href="https://github.com/caocuong2404/vn-map" className="text-primary">
+          VN Map
         </Link>
       </div>
       <div className="text-primary">

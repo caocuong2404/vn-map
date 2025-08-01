@@ -1,10 +1,9 @@
-VN Map - Interactive Vietnam Province Map
+VN Map - Searchable Map of Vietnam Provinces and Wards
 ===============
 
-An interactive Vietnam map application built with [Next.js](https://nextjs.org/) and [Leaflet React](https://react-leaflet.js.org/). Features province search, detailed statistics, and beautiful visualizations. Template enhanced by [Tailwind CSS](https://tailwindcss.com/) and [Lucide icons](https://lucide.dev/). ✨
-Built with [TypeScript](https://www.typescriptlang.org/) 👐.
+VN Map helps you search and display the latest positions of provinces and wards after Vietnam's administrative reform mergers. Built with [Next.js](https://nextjs.org/) and [React Leaflet](https://react-leaflet.js.org/) and styled by [Tailwind CSS](https://tailwindcss.com/) with [Lucide icons](https://lucide.dev/). ✨ Built with [TypeScript](https://www.typescriptlang.org/) 👐.
 
-Packed with Vietnam-specific components including province search, GeoJSON visualization, and administrative data display for Vietnamese mapping projects.
+VN Map provides province search, GeoJSON visualization and up‑to‑date administrative information to help you explore the new province and ward structure across Vietnam.
 
 ### Table of Contents
 1. [Features](#features)
@@ -37,7 +36,7 @@ Packed with Vietnam-specific components including province search, GeoJSON visua
 
 #### <a id="breaking-changes"></a> 💣 Breaking Changes introduced > v0.1.1
 
-In Version v0.1.2, I changed the path aliases to be more consistent with the ES standards from `@alias` to `#alias`. If pulling the template from v0.1.1 you have to change the import paths in your components and pages.
+In Version v0.1.2, I changed the path aliases to be more consistent with the ES standards from `@alias` to `#alias`. If upgrading from v0.1.1 you have to change the import paths in your components and pages.
 
 ```diff
 - import { SomeComponent } from '@components/useMap'
@@ -48,7 +47,7 @@ In Version v0.1.2, I changed the path aliases to be more consistent with the ES 
 
 Create new Github repo with vercel and deploy it within minutes. Could not be easier as hitting some buttons. Shipping of private repos is possible.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2Fvn-map)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcaocuong2404%2Fvn-map)
 
 Later: Check out your repo locally and run ```npm install``` or ```yarn``` in root
 
@@ -57,7 +56,7 @@ Follow Instructions for [Starting Up](#start-up)
 #### <a id="manual-install"></a> ⚙️ Manual install
 
 ```bash
-git clone https://github.com/your-username/vn-map
+git clone https://github.com/caocuong2404/vn-map
 # then
 npm install
 # or  
